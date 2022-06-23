@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -19,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         rvAnimal=findViewById(R.id.rv_animal)
         list.addAll(AnimalData.listData)
         showRecycleList()
@@ -27,17 +27,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun showRecycleList() {
         rvAnimal.layoutManager = LinearLayoutManager(this)
-        val listAdapter = AnimalListAdapter(list, object :onListener{
+        val listAdapter = AnimalListAdapter(list, object :OnListener{
             override fun klik(listAnimal: Animal) {
                 startActivity(Intent(this@MainActivity,DetailActivity::class.java)
                     .putExtra("name",listAnimal.name)
                     .putExtra("detail",listAnimal.detail)
                     .putExtra("image",listAnimal.photo)
                 )
-
             }
-
-
         })
         rvAnimal.adapter=listAdapter
     }

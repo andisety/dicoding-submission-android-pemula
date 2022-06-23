@@ -1,53 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutActivity">
-
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
     <ImageView
+        android:id="@+id/iv_img_detail"
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        tools:src="@drawable/kambing"/>
+    <TextView
+        android:id="@+id/tv_name_detail"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/teal_200"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile"
-        android:layout_marginTop="100dp"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/profile"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#6E6363"/>
-    <TextView
-        android:id="@+id/name"
-        android:layout_marginTop="5dp"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Andi Setyo Purnomo"
-        android:textStyle="bold"
-        android:textSize="30dp"
-        app:layout_constraintTop_toBottomOf="@id/profile"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        tools:text="Kucing"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/green2"
+        android:textStyle="bold"/>
     <TextView
-        android:id="@+id/email"
-        android:layout_marginTop="5dp"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_detail_detail"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="andisetyo5252@gmail.com"
-        android:textSize="15dp"
-        app:layout_constraintTop_toBottomOf="@id/name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        tools:text="Kucing"
+        android:textAlignment="center"
+        android:textColor="@color/green2"
+        android:gravity="center" />
 
 
 
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

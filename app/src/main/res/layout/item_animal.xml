@@ -8,47 +8,48 @@
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     app:cardCornerRadius="2dp"
-    android:outlineAmbientShadowColor="@color/black"
-    android:outlineSpotShadowColor="@color/black"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="16dp">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
         >
+
         <ImageView
             android:id="@+id/tv_img_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:src="@drawable/sapi"
-            android:maxWidth="80dp"
-            android:maxHeight="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:src="@drawable/singa"
+            android:padding="5dp"
             android:adjustViewBounds="true"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:scaleType="fitXY"/>
-        <TextView
-            android:id="@+id/tv_item_name"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="8dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/tv_img_item"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="sapi"/>
-        <TextView
-            android:id="@+id/tv_item_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:paddingRight="2dp"
-            android:ellipsize="end"
-            android:maxLines="2"
-            app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
-            app:layout_constraintStart_toEndOf="@+id/tv_img_item"
-            tools:text="jsnjd sjdjsd sjndd sjdns jsdn"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/green2"
+                tools:text="sapi"/>
+            <TextView
+                android:id="@+id/tv_item_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:paddingRight="2dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textColor="@color/green2"
+                tools:text="jjjj jjjjjjjjjjjjjj jjjjjjjjjjjj"/>
+        </LinearLayout>
+
+    </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

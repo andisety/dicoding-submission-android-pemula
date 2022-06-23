@@ -7,12 +7,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class AnimalListAdapter(val listAnimal:ArrayList<Animal>,val listener:onListener): RecyclerView.Adapter<AnimalListAdapter.AnimalListViewHolder>() {
+class AnimalListAdapter(private val listAnimal:ArrayList<Animal>,private val listener:OnListener): RecyclerView.Adapter<AnimalListAdapter.AnimalListViewHolder>() {
 
     class AnimalListViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
-        val name = itemView.findViewById<TextView>(R.id.tv_item_name)
-        val detail = itemView.findViewById<TextView>(R.id.tv_item_detail)
-        val photo = itemView.findViewById<ImageView>(R.id.tv_img_item)
+        val name: TextView = itemView.findViewById(R.id.tv_item_name)
+        val detail: TextView = itemView.findViewById(R.id.tv_item_detail)
+        val photo: ImageView = itemView.findViewById(R.id.tv_img_item)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimalListViewHolder {
@@ -35,6 +35,6 @@ class AnimalListAdapter(val listAnimal:ArrayList<Animal>,val listener:onListener
     }
 }
 
-interface onListener{
+interface OnListener{
     fun klik(listAnimal:Animal)
 }
